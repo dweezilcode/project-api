@@ -1,0 +1,37 @@
+Make sure to open the folder inside this folder to avoid disfunctions.
+Let the mysql run and use the database.
+Install nodejs from google.
+
+Terminal:
+npm install
+npm install express
+npm install joi
+npm install cors
+npm install sequelize
+npm install winston
+npm install rootpath
+npm install jsonwebtoken bcryptjs
+npm install sequelize mysql2
+npm install express-validator
+
+npm start (manual)
+npm run start:dev (automatic)
+
+Port: 4000
+Database: one
+
+Project Requirements:
+User Activity Logging: The system needs to track user activity for auditing and security purposes..
+It Contains information about the user action, such as:
+Action type (e.g., login, logout, profile update, password change)
+Timestamp
+IP address
+Browser information 
+Endpoint: /api/users/{userId}/activity
+Retrieve User Activity: Optional filters to search for specific activities (e.g., action type, timestamp range).
+Endpoint: /api/users/{userId}/activity
+
+Thunder Client Testing:
+(GET) http://localhost:4000/api/users/1/activity
+Query
+Parameter: ipAddress                  Value: 192.168.1.1
