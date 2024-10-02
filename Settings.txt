@@ -1,0 +1,38 @@
+Port: 5000
+Database: one
+
+Make sure to open the folder inside this folder to avoid disfunctions.
+Let the mysql run and use the database.
+Install nodejs from google.
+
+Terminal:
+npm install
+npm install express
+npm install joi
+npm install cors
+npm install sequelize
+npm install winston
+npm install rootpath
+npm install jsonwebtoken bcryptjs
+npm install sequelize mysql2
+npm install express-validator
+
+npm start (manual)
+npm run start:dev (automatic)
+
+Project Requirements:
+User Preferences and Settings: Users want to customize their preferences and settings. theme color, email notifications and language
+Retrieve User Preferences:
+Endpoint: /api/users/{userId}/preferences
+Update User Preferences:
+Endpoint: /api/users/{userId}/preferences
+Request Body: Contains the updated preferences and settings.
+
+Thunder Client Testing:
+(PUT) http://localhost:5000/api/users/1/preferences
+Json Body
+{
+    "themeColor": "dark",
+    "emailNotifications": true,
+    "language": "en"
+}

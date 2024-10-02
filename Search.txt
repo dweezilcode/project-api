@@ -1,0 +1,31 @@
+Make sure to open the folder inside this folder to avoid disfunctions.
+Let the mysql run and use the database.
+Install nodejs from google.
+
+Terminal:
+npm install
+npm install express
+npm install joi
+npm install cors
+npm install sequelize
+npm install winston
+npm install rootpath
+npm install jsonwebtoken bcryptjs
+npm install sequelize mysql2
+npm install express-validator
+
+npm start (manual)
+npm run start:dev (automatic)
+
+Port: 4000
+Database: one
+
+Project Requirements:
+User Search and Filtering: An administrator wants to search for and filter users based on various criteria.
+[Full name, Email, Role, Status (active, inactive), Date created and Date last logged in]
+Endpoint: /api/users/search
+
+Thunder Client Testing:
+(GET) http://localhost:4000/api/users/search
+Query
+Parameter: email                  Value: dweezil
