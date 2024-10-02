@@ -1,0 +1,155 @@
+Port: 4000
+Database: product
+Manual alter column for stock availability requirement using mysql commandline:
+ALTER TABLE Products ADD COLUMN stock INT NOT NULL DEFAULT 0;
+
+Make sure to open the folder inside this folder to avoid disfunctions.
+Let the mysql run and use the database.
+Install nodejs from google.
+
+Terminal:
+npm install
+npm install express
+npm install joi
+npm install cors
+npm install sequelize
+npm install winston
+npm install rootpath
+npm install jsonwebtoken bcryptjs
+npm install sequelize mysql2
+npm install express-validator
+
+npm start (manual)
+npm run start:dev (automatic)
+
+Project Requirements: Product and Inventory Management
+Scenario: Managing products and inventory by administrators, managers, and customers.
+API Endpoints:
+-
+View Products (Administrator/Manager/Customer):
+Endpoint: GET /api/products
+Description: Retrieves a list of all products available in the system. Accessible to administrators, managers, and customers for browsing products.
+-
+View Product Details (Administrator/Manager/Customer):
+Endpoint: GET /api/products/{productId}
+Description: Retrieves the details of a specific product by its ID. Available to administrators, managers, and customers for viewing product details.
+-
+Create Product (Administrator/Manager):
+Endpoint: POST /api/products
+Description: Allows administrators and managers to add new products to the system. Administrators and managers send a POST request with the product details (name, description, price, etc.).
+-
+Update Product (Administrator/Manager):
+Endpoint: PUT /api/products/{productId}
+Description: Allows administrators and managers to update the details of an existing product. Administrators and managers send a PUT request with the updated product details. Add a status to identify a product that is marked as deleted.
+-
+View Inventory (Administrator/Manager):
+Endpoint: GET /api/inventory
+Description: Retrieves the current inventory of products available in the system. Accessible to administrators and managers for managing inventory.
+-
+Update Inventory (Administrator/Manager):
+Endpoint: POST /api/inventory
+Description: Allows administrators and managers to update the inventory by adding new stock or adjusting existing stock levels. Administrators and managers send a POST request with the inventory update details (product ID, quantity).
+-
+Check Stock Availability (Customer):
+Endpoint: GET /api/products/{productId}/availability
+Description: Allows customers to check the availability of a product in stock. Customers send a GET request to check the availability of the product by its ID.
+-
+
+
+Thunder Client Testing:
+
+(POST)http://localhost:4000/api/register
+Body Json
+{
+  "username": "lelouch",
+  "password": "lelouchpass",
+  "role": "administrator"
+}
+
+---
+
+(POST)http://localhost:4000/api/login
+Body Json
+{
+  "username": "lelouch",
+  "password": "lelouchpass"
+}
+
+---
+
+(GET)http://localhost:4000/api/products
+
+---
+
+(GET)http://localhost:4000/api/products/1
+
+---
+
+(POST)http://localhost:4000/api/products
+Headers
+Content-Type		application/json
+Authorization		Bearer afnaflnsignrignering
+
+Body Json
+{
+  "name": "Computer",
+  "description": "Local",
+  "price": 500.00
+}
+
+---
+
+(PUT)http://localhost:4000/api/products/1
+Headers
+Content-Type		application/json
+Authorization		Bearer afnaflnsignrignering
+
+Body Json
+{
+  "name": "Car",
+  "description": "Bingo",
+  "price": 100000000.00
+}
+
+---
+
+(DELETE)http://localhost:4000/api/products/1
+Headers
+Content-Type		application/json
+Authorization		Bearer afnaflnsignrignering
+
+---
+
+(GET)http://localhost:4000/api/inventory
+Headers
+Content-Type		application/json
+Authorization		Bearer afnaflnsignrignering
+
+---
+
+(POST)http://localhost:4000/api/inventory
+Headers
+Content-Type		application/json
+Authorization		Bearer afnaflnsignrignering
+
+{
+  "productId": 1,
+  "quantity": 600
+}
+
+---
+
+(GET)http://localhost:4000/api/products/2/availability
+
+---
+
+
+
+
+
+
+
+
+
+
+
