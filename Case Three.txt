@@ -1,0 +1,92 @@
+Make sure to open the folder inside this folder to avoid disfunctions.
+Let the mysql run and use the database.
+Install nodejs from google.
+
+Terminal:
+npm install swagger-ui-express
+npm install
+npm install express
+npm install joi
+npm install cors
+npm install sequelize
+npm install winston
+npm install rootpath
+npm install jsonwebtoken bcryptjs
+npm install sequelize mysql2
+npm install express-validator
+
+npm start (manual)
+npm run start:dev (automatic)
+
+Port: 4000
+Database: one
+
+Project Requirements:
+How to build a boilerplate sign up and authentication API with Node.js and MySQL that includes:
+Email sign up and verification
+JWT authentication with refresh tokens
+Role based authorization with support for two roles (User & Admin)
+Forgot password and reset password functionality
+Account management (CRUD) routes with role based access control
+Swagger api documentation route
+
+----------
+
+Ethereal Email - https://ethereal.email
+Name: Everett Bartoletti
+Username: everett.bartoletti@ethereal.email
+Password: bHscU2B9vGAqWpXP53
+
+SMTP configuration
+Host	smtp.ethereal.email
+Port	587
+Security	STARTTLS
+Username	everett.bartoletti@ethereal.email
+Password	bHscU2B9vGAqWpXP53
+
+IMAP configuration
+Host	imap.ethereal.email
+Port	993
+Security	TLS
+Username	everett.bartoletti@ethereal.email
+Password	bHscU2B9vGAqWpXP53
+
+POP3 configuration
+Host	pop3.ethereal.email
+Port	995
+Security	TLS
+Username	everett.bartoletti@ethereal.email
+Password	bHscU2B9vGAqWpXP53
+
+Nodemailer configuration
+const transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+        user: 'everett.bartoletti@ethereal.email',
+        pass: 'bHscU2B9vGAqWpXP53'
+    }
+});
+
+PHPMailer configuration
+$mail = new PHPMailer(true);
+$mail->isSMTP();
+$mail->Host = 'smtp.ethereal.email';
+$mail->SMTPAuth = true;
+$mail->Username = 'everett.bartoletti@ethereal.email';
+$mail->Password = 'bHscU2B9vGAqWpXP53';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+
+SwiftMailer configuration
+$transport = (new Swift_SmtpTransport('smtp.ethereal.email', 587, 'tls'))
+  ->setUsername('everett.bartoletti@ethereal.email')
+  ->setPassword('bHscU2B9vGAqWpXP53');
+
+----------
+
+http://localhost:4000/api-docs/#/
+
+----------
+
+Thunder Client Testing below the pdf file...
